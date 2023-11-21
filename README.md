@@ -15,7 +15,7 @@ Below API calls and result
 ##GET ALL Customers (http://localhost:8080/customer/api/v1/getllcustomers)
 
 Result
-
+```
 [
     {
         "id": 202,
@@ -40,19 +40,19 @@ Result
         }
     }
 	]
-	
+```	
 		
 ##POST new customer (	http://localhost:8080/customer/api/v1/createcustomer)
 
 	request body	
-	
+```	
 		{
 		"firstname": "maduma",
 		"lastname": "payagala",
 		"address": "homagama",
 		"loyalty":null
 	}
-	
+```	
 	Result
 	
 	200 OK
@@ -61,15 +61,15 @@ Result
 ##	add point to customer (http://localhost:8080/loyalty/api/v1/addLoyaltyPoints)
 	
 	
-	
+```	
 	{
     "id":202,
     "pointAdd":10,
     "pointDeduct":0
 }
-
+```
 result
-
+```
 {
     "id": 202,
     "totalPoints": 80.0,
@@ -77,18 +77,18 @@ result
     "updateStatus": true,
     "remark": "Customer loyalty point added"
 }
-
+```
 ## Deduct point from  customer(http://localhost:8080/loyalty/api/v1/deductLoyaltyPoints)
 
-
+```
 {
     "id":202,
     "pointAdd":0,
     "pointDeduct":40
 }
-
+```
 Result
-
+```
 {
     "id": 202,
     "totalPoints": 80.0,
@@ -96,9 +96,9 @@ Result
     "updateStatus": true,
     "remark": "Customer loyalty point deducted"
 }
-
+```
 Invalid result
-
+```
 {
     "id": 202,
     "totalPoints": 0.0,
@@ -106,3 +106,4 @@ Invalid result
     "updateStatus": false,
     "remark": "Invalid point amount"
 }
+```
